@@ -24,9 +24,8 @@
   --bg-white-2: #eee;
   --bg-white-3: #ddd;
   
-  --text-color-1: lightgoldenrodyellow;
+  --text-color-1: darkgoldenrod;
   --text-color-2: mediumpurple;
-  --text-color-3: darkgoldenrod;
 
   --border-color: #000;
   --strong: rebeccapurple;
@@ -76,8 +75,8 @@ h2, h2 > i {
 }
 h3 {
   font-size: 2rem;
-  color: var(--text-color-3);
-  padding: 2rem 0 0 0;
+  color: var(--text-color-2);
+  padding: 0;
   text-align: justify;
   display: flex;
   align-self: center;
@@ -118,7 +117,7 @@ span, em, strong {
 span > i {
   font-size: 1.4rem;
   padding-right: 1rem;
-  color: var(--text-color-3);
+  color: var(--text-color-2);
 }
 
 strong {
@@ -136,8 +135,8 @@ progress {
   width: 20rem;
   background-color: var(--bg-white-3);
 }
-progress::-webkit-progress-value { background: var(--text-color-3); }
-progress::-moz-progress-bar { background: var(--text-color-3); }
+progress::-webkit-progress-value { background: var(--text-color-2); }
+progress::-moz-progress-bar { background: var(--text-color-2); }
 
 /**
  * -----------------------------------------------------------------------------
@@ -166,9 +165,9 @@ progress::-moz-progress-bar { background: var(--text-color-3); }
 .nom img {
   display: flex;
   align-self: center;
-  margin-top: 1rem;
+  margin: 0.5rem;
   width: 90%;
-  filter: grayscale(100%);
+  filter: grayscale(50%);
   box-shadow: 0 0 0.2rem var(--bg-white-1);
 }
 
@@ -180,7 +179,7 @@ progress::-moz-progress-bar { background: var(--text-color-3); }
 .informations {
   grid-area: informations;
   color: var(--bg-white-2);
-  padding: 2rem;
+  padding: 1rem;
 }
 
 /**
@@ -191,7 +190,7 @@ progress::-moz-progress-bar { background: var(--text-color-3); }
 .competences {
   grid-area: competences ;
   background-color: var(--bg-dark-1);;
-  padding: 0 2rem;
+  padding: 0 1rem;
 }
 
 /**
@@ -202,7 +201,7 @@ progress::-moz-progress-bar { background: var(--text-color-3); }
 .langues {
   grid-area: langues;
   background-color: var(--bg-dark-1);;
-  padding: 2rem 2rem 0 2rem;
+  padding: 1rem 1rem 0 1rem;
 }
 
 /**
@@ -278,13 +277,13 @@ progress::-moz-progress-bar { background: var(--text-color-3); }
 }
 
 .qualites dl {
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 
 .qualites dt {
   font-weight: 700;
   line-height: 1.7em;
-  color: var(--text-color-3);
+  color: var(--text-color-2);
   font-size: 1.7rem;
 }
 .qualites dt::before {

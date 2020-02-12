@@ -1,142 +1,59 @@
 /**
  * -----------------------------------------------------------------------------
- * RESET
- * -----------------------------------------------------------------------------
- */
- * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-size: 62.5%;
-  font-family: 'Open Sans', sans-serif;
-}
-
-/**
- * -----------------------------------------------------------------------------
- * VARIABLES
- * -----------------------------------------------------------------------------
- */
-:root {
-  --bg-dark-1: #222;
-  --bg-dark-1: #333;
-  
-  --bg-white-1: #fff;
-  --bg-white-2: #eee;
-  --bg-white-3: #ddd;
-  
-  --text-color-1: darkgoldenrod;
-  --text-color-2: mediumpurple;
-
-  --border-color: #000;
-  --strong: rebeccapurple;
-  --em: darkred;
-}
-
-/**
- * -----------------------------------------------------------------------------
  * TAG GENERAL
  * -----------------------------------------------------------------------------
  */
 body {
   background-color: var(--bg-dark-1);
-  min-height: 100vh;
   max-height: 100vh;
+  max-width: 100vw;
+  overflow: hidden;
   display: grid;
   grid: 
-    "presentation profil profil profil profil" 27rem
-    "presentation formations formations experiences experiences" 1fr
-    "presentation formations formations qualites qualites" 1fr / 42rem 1fr 1fr 1fr 1fr;
+    "presentation profil profil" 28rem
+    "presentation formations__experiences formations__experiences" 1fr / 1fr 2fr 2fr;
 }
 
-h1,
-h2,
-h3 {
-  text-transform: uppercase;
-  font-family: 'Lato', sans-serif;
-}
-
-h2, h3 {
-  font-style: italic;
-}
-
-h1 {
-  font-size: 2.8rem;
-  text-align: center;
-  color: var(--text-color-1);
-}
-h2 {
-  margin: 0 0 1rem 0;
-  color: var(--text-color-2);
-  border-bottom: 0.1rem solid var(--text-color-2);
-  padding-bottom: 1rem;
-}
-h2, h2 > i {
-  font-size: 2.4rem;  
-}
-h3 {
-  font-size: 2rem;
-  color: var(--text-color-2);
-  padding: 0;
-  text-align: justify;
-  display: flex;
-  align-self: center;
-}
-
-ul {
-  list-style: none;
-}
+/**
+ * -----------------------------------------------------------------------------
+ * TAG GENERAL > UL LI A
+ * -----------------------------------------------------------------------------
+ */
 ul li {
+  font-size: 1.2rem;
+}
+
+/**
+ * -----------------------------------------------------------------------------
+ * TAG GENERAL > DL DT DD
+ * -----------------------------------------------------------------------------
+ */
+
+dl {
   display: flex;
-  justify-content: space-between;
-  font-size: 1.4rem;
+  justify-content: center;
+  flex-flow: column wrap;
 }
 
 dt {
-  font-weight: 700;
-  line-height: 1.7em;
-  font-size: 1.5rem;
-}
-dt::before {
-  content: '\221A'; /* https://www.compart.com/fr/unicode/U+221A */
-  padding-right: 5px;
-}
-dd {
-  font-weight: 300;
-  padding-left: 20px;
-  font-style: italic;
-  margin-bottom: 10px;
-}
-dd:last-child {
-  margin-bottom: 0;
+  line-height: 1.4rem;
+  font-size: 1.4rem;
 }
 
+/**
+ * -----------------------------------------------------------------------------
+ * TAG GENERAL > SPAN EM STRONG PROGRESS
+ * -----------------------------------------------------------------------------
+ */
 span, em, strong {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
 }
-
 span > i {
-  font-size: 1.4rem;
-  padding-right: 1rem;
-  color: var(--text-color-2);
+  font-size: 1.2rem;
 }
-
-strong {
-  font-weight: 700;
-  color: var(--strong);
-}
-
-em {
-  font-weight: 300;
-  font-style: italic;
-  color: var(--em);
-}
-
 progress {
-  width: 20rem;
-  background-color: var(--bg-white-3);
+  width: 17rem;
 }
-progress::-webkit-progress-value { background: var(--text-color-2); }
-progress::-moz-progress-bar { background: var(--text-color-2); }
 
 /**
  * -----------------------------------------------------------------------------
@@ -144,64 +61,18 @@ progress::-moz-progress-bar { background: var(--text-color-2); }
  * -----------------------------------------------------------------------------
  */
 .presentation {
-  background-color: var(--bg-dark-1);
-  color: var(--bg-white-2);
   padding: 1rem;
   min-height: 100vh;
+  max-height: 100vh;
+  min-width: 38rem;
+  max-width: 38rem;
 
   display: grid;
   grid: 
     "nom" 1fr
     "informations" 1fr
-    "competences" 1fr
-    "langues" 1fr / 40rem;
-}
-
-.nom {
-  grid-area: nom;
-  display: flex;
-  flex-flow: column wrap;
-}
-.nom img {
-  display: flex;
-  align-self: center;
-  margin: 0.5rem;
-  width: 90%;
-  filter: grayscale(50%);
-  box-shadow: 0 0 0.2rem var(--bg-white-1);
-}
-
-/**
- * -----------------------------------------------------------------------------
- * SECTION PRESENTATION > INFORMATIONS
- * -----------------------------------------------------------------------------
- */
-.informations {
-  grid-area: informations;
-  color: var(--bg-white-2);
-  padding: 1rem;
-}
-
-/**
- * -----------------------------------------------------------------------------
- * SECTION PRESENTATION > COMPETENCES
- * -----------------------------------------------------------------------------
- */
-.competences {
-  grid-area: competences ;
-  background-color: var(--bg-dark-1);
-  padding: 0 1rem;
-}
-
-/**
- * -----------------------------------------------------------------------------
- * SECTION PRESENTATION > LANGUES
- * -----------------------------------------------------------------------------
- */
-.langues {
-  grid-area: langues;
-  background-color: var(--bg-dark-1);
-  padding: 1rem 1rem 0 1rem;
+    "competences" 1fr 
+    "langues" 1fr / 1fr;
 }
 
 /**
@@ -211,19 +82,29 @@ progress::-moz-progress-bar { background: var(--text-color-2); }
  */
 .profil {
   grid-area: profil;
-  background-color: var(--bg-white-3);
-  padding: 2rem;
-  border-bottom: 0.1rem solid var(--border-color);
+  min-width: calc( 100vw - 38rem );
+  max-height: 28rem;
+  padding: 1rem;
 }
 .profil p {
-  font-size: 1.4rem;
-  font-weight: 300;
-  min-width: 60rem;
-  max-width: 150rem;
-  letter-spacing: 0.11rem;
-  padding: 0 2rem 2rem 2rem;
+  padding: 1rem;
   columns: 4;
-  column-gap: 2rem;
+  column-gap: 1rem;
+}
+
+/**
+ * -----------------------------------------------------------------------------
+ * SECTION FORMATIONS & EXPERIENCES - ( container )
+ * -----------------------------------------------------------------------------
+ */
+.formations__experiences {
+  grid-area: formations__experiences;
+  display: flex;
+  justify-content: space-evenly;
+  flex-flow: row nowrap;
+  min-width: calc( 100vw - 38rem );
+  min-height: calc( 31rem  - 100vh );
+  overflow: hidden;
 }
 
 /**
@@ -232,36 +113,29 @@ progress::-moz-progress-bar { background: var(--text-color-2); }
  * -----------------------------------------------------------------------------
  */
 .formations {
-  grid-area: formations;
-  background-color: var(--bg-white-2);
-  padding: 2rem 2rem 0 2rem;
   font-size: 1.4rem;
+  border-right: 0.1rem solid var(--border-color);
+  padding: 1rem;
+  width: 50%;
 }
-.formations a {
-  font-size: 1.4rem;
-  text-decoration: none;
-}
-
 .experiences {
-  grid-area: experiences;
-  background-color: var(--bg-white-1);
-  padding: 2rem;
-  border-left: 0.1rem solid var(--border-color);
+  font-size: 1.4rem;
+  padding: 1rem;
+  width: 50%;
 }
 
-.ul_experiences {
-  position: relative;
+.formations dt, .experiences dt {
+  padding: 1rem;
+  margin-top: 0.5rem;
 }
 
-.ul_experiences img {
-  position: absolute;
-  min-width: 5rem;
-  max-width: 5rem;
-  min-height: 5rem;
-  max-height: 5rem;
-  right: 2.5rem;
-  top: -1rem;
-  filter: drop-shadow(0 0 0.2rem var(--bg-dark-2));
+.formations a {
+  font-size: 1.2rem;
+}
+
+.ul_formations img, .ul_experiences img {
+  top: 0rem;
+  right: 4rem;
 }
 
 /**
@@ -270,31 +144,22 @@ progress::-moz-progress-bar { background: var(--text-color-2); }
  * -----------------------------------------------------------------------------
  */
 .qualites {
-  grid-area: qualites;
-  background-color: var(--bg-dark-2);
-  padding: 2rem 2rem 0 2rem;
+  position: absolute;
+  bottom: 0rem;
+  right: 0;
+  background-color: var(--bg-dark-1);
+  padding: 1rem;
+  width: calc( 60.11vw - 38rem );
+  z-index: 99999;
+  min-height: 27rem;
 }
 
 .qualites dl {
   margin-top: 1rem;
 }
 
-.qualites dt {
-  font-weight: 700;
-  line-height: 1.7em;
-  color: var(--text-color-2);
-  font-size: 1.7rem;
-}
-.qualites dt::before {
-  content: '\1F3C5'; /* https://www.compart.com/fr/unicode/U+1F3C5 */
-  padding-right: 1rem;
-}
-
 .qualites dd {
-  font-weight: 300;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   padding-left: 4rem;
-  font-style: italic;
-  color: var(--bg-white-1);
 }
 

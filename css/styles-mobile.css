@@ -1,0 +1,130 @@
+
+/**
+ * -----------------------------------------------------------------------------
+ * TAG GENERAL
+ * -----------------------------------------------------------------------------
+ */
+body {
+  min-width: 100vw;
+  max-width: 100vw;
+  display: grid;
+  grid: 
+    "presentation" 1fr
+    "profil" 1fr
+    "formations" 1fr
+    "experiences" 1fr
+    "qualites" 1fr / 1fr;
+}
+
+h2 {
+  margin: 2rem 0;
+  padding-bottom: 1rem;
+}
+
+progress {
+  width: 40rem;
+}
+
+/**
+ * -----------------------------------------------------------------------------
+ * SECTION PRESENTATION
+ * -----------------------------------------------------------------------------
+ */
+.presentation {
+  padding: 2rem;
+  min-width: 80%;
+  max-width: 100%;
+  min-height: 120rem;
+
+  display: grid;
+  grid: 
+    "nom" 1fr
+    "informations" 1fr
+    "competences" 1fr
+    "langues" 1fr / 1fr;
+}
+
+.nom {
+  grid-area: nom;
+}
+.nom img {
+  margin: 2rem;
+}
+
+/**
+ * -----------------------------------------------------------------------------
+ * SECTION PRESENTATION > INFORMATIONS
+ * -----------------------------------------------------------------------------
+ */
+.informations {
+  grid-area: informations;
+  padding: 2rem;
+}
+
+/**
+ * -----------------------------------------------------------------------------
+ * SECTION PRESENTATION > COMPETENCES
+ * -----------------------------------------------------------------------------
+ */
+.competences {
+  grid-area: competences ;
+  padding: 2rem;
+}
+
+/**
+ * -----------------------------------------------------------------------------
+ * SECTION PRESENTATION > LANGUES
+ * -----------------------------------------------------------------------------
+ */
+.langues {
+  grid-area: langues;
+  padding: 2rem 2rem 0 2rem;
+}
+
+/**
+ * -----------------------------------------------------------------------------
+ * SECTION PROFIL
+ * -----------------------------------------------------------------------------
+ */
+.profil {
+  grid-area: profil;
+  padding: 2rem;
+  border-bottom: 0.1rem solid var(--border-color);
+}
+.profil p {
+  columns: 1;
+  white-space: pre-line;
+}
+
+/**
+ * -----------------------------------------------------------------------------
+ * SECTION FORMATIONS / SECTION EXPERIENCES
+ * -----------------------------------------------------------------------------
+ */
+.formations {
+  padding: 2rem;
+  min-height: 80rem;
+}
+
+.ul_experiences img {
+  right: 0.5rem;
+  top: -1.5rem;
+}
+
+.experiences {
+  min-height: 50rem;
+}
+
+/**
+ * -----------------------------------------------------------------------------
+ * SECTION QUALITES
+ * -----------------------------------------------------------------------------
+ */
+.qualites {
+  padding: 2rem;
+  min-height: 50rem;
+}
+
+.qualites dl {
+  margin-top: 2rem;
+}

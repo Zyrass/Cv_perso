@@ -17,18 +17,18 @@
  * -----------------------------------------------------------------------------
  */
 :root {
-  --dark000: #000;
-  --dark222: #222;
-  --dark333: #333;
-  --dark444: #444;
+  --bg-dark-1: #222;
+  --bg-dark-1: #333;
+  
+  --bg-white-1: #fff;
+  --bg-white-2: #eee;
+  --bg-white-3: #ddd;
+  
+  --text-color-1: lightgoldenrodyellow;
+  --text-color-2: mediumpurple;
+  --text-color-3: darkgoldenrod;
 
-  --whitefff: #fff;
-  --whiteeee: #eee;
-  --whiteddd: #ddd;
-
-  --h1: lightgoldenrodyellow;
-  --h2: mediumpurple;
-  --h3: darkgoldenrod;
+  --border-color: #000;
   --strong: rebeccapurple;
   --em: darkred;
 }
@@ -39,7 +39,7 @@
  * -----------------------------------------------------------------------------
  */
 body {
-  background-color: var(--dark222);
+  background-color: var(--bg-dark-1);
   min-height: 100vh;
   max-height: 100vh;
   display: grid;
@@ -63,19 +63,20 @@ h2, h3 {
 h1 {
   font-size: 2.8rem;
   text-align: center;
-  color: var(--h1);
+  color: var(--text-color-1);
 }
 h2 {
   margin: 0 0 1rem 0;
-  color: var(--h2);
-  border-bottom: 0.1rem solid var(--h2);
+  color: var(--text-color-2);
+  border-bottom: 0.1rem solid var(--text-color-2);
+  padding-bottom: 1rem;
 }
 h2, h2 > i {
   font-size: 2.4rem;  
 }
 h3 {
   font-size: 2rem;
-  color: var(--h3);
+  color: var(--text-color-3);
   padding: 2rem 0 0 0;
   text-align: justify;
   display: flex;
@@ -117,7 +118,7 @@ span, em, strong {
 span > i {
   font-size: 1.4rem;
   padding-right: 1rem;
-  color: var(--h3);
+  color: var(--text-color-3);
 }
 
 strong {
@@ -135,7 +136,7 @@ progress {
   width: 20rem;
   background-color: blue;
 }
-progress::-webkit-progress-value { background: var(--h3); }
+progress::-webkit-progress-value { background: var(--text-color-3); }
 
 /**
  * -----------------------------------------------------------------------------
@@ -143,8 +144,8 @@ progress::-webkit-progress-value { background: var(--h3); }
  * -----------------------------------------------------------------------------
  */
 .presentation {
-  background-color: var(--dark222);
-  color: var(--whiteeee);
+  background-color: var(--bg-dark-1);
+  color: var(--bg-white-2);
   padding: 1rem;
   min-height: 100vh;
 
@@ -167,7 +168,7 @@ progress::-webkit-progress-value { background: var(--h3); }
   margin-top: 1rem;
   width: 90%;
   filter: grayscale(100%);
-  box-shadow: 0 0 0.2rem var(--whitefff);
+  box-shadow: 0 0 0.2rem var(--bg-white-1);
 }
 
 /**
@@ -177,7 +178,7 @@ progress::-webkit-progress-value { background: var(--h3); }
  */
 .informations {
   grid-area: informations;
-  color: var(--whiteeee);
+  color: var(--bg-white-2);
   padding: 2rem;
 }
 
@@ -188,7 +189,7 @@ progress::-webkit-progress-value { background: var(--h3); }
  */
 .competences {
   grid-area: competences ;
-  background-color: var(--dark222);;
+  background-color: var(--bg-dark-1);;
   padding: 0 2rem;
 }
 
@@ -199,7 +200,7 @@ progress::-webkit-progress-value { background: var(--h3); }
  */
 .langues {
   grid-area: langues;
-  background-color: var(--dark222);;
+  background-color: var(--bg-dark-1);;
   padding: 2rem 2rem 0 2rem;
 }
 
@@ -210,9 +211,9 @@ progress::-webkit-progress-value { background: var(--h3); }
  */
 .profil {
   grid-area: profil;
-  background-color: var(--whiteddd);
+  background-color: var(--bg-white-3);
   padding: 2rem;
-  border-bottom: 0.1rem solid var(--dark000);
+  border-bottom: 0.1rem solid var(--border-color);
 }
 .profil p {
   font-size: 1.4rem;
@@ -220,7 +221,7 @@ progress::-webkit-progress-value { background: var(--h3); }
   min-width: 60rem;
   max-width: 150rem;
   letter-spacing: 0.11rem;
-  padding: 2rem;
+  padding: 0 2rem 2rem 2rem;
   columns: 4;
   column-gap: 2rem;
   text-align: justify;
@@ -233,7 +234,7 @@ progress::-webkit-progress-value { background: var(--h3); }
  */
 .formations {
   grid-area: formations;
-  background-color: var(--whiteeee);
+  background-color: var(--bg-white-2);
   padding: 2rem 2rem 0 2rem;
   font-size: 1.4rem;
 }
@@ -244,9 +245,9 @@ progress::-webkit-progress-value { background: var(--h3); }
 
 .experiences {
   grid-area: experiences;
-  background-color: var(--whitefff);
+  background-color: var(--bg-white-1);
   padding: 2rem;
-  border-left: 0.1rem solid var(--dark000);
+  border-left: 0.1rem solid var(--border-color);
 }
 
 .ul_experiences {
@@ -261,7 +262,7 @@ progress::-webkit-progress-value { background: var(--h3); }
   max-height: 5rem;
   right: 2.5rem;
   top: -1rem;
-  filter: drop-shadow(0 0 0.2rem var(--dark333));
+  filter: drop-shadow(0 0 0.2rem var(--bg-dark-2));
 }
 
 /**
@@ -271,7 +272,7 @@ progress::-webkit-progress-value { background: var(--h3); }
  */
 .qualites {
   grid-area: qualites;
-  background-color: var(--dark333);
+  background-color: var(--bg-dark-2);
   padding: 2rem 2rem 0 2rem;
 }
 
@@ -282,7 +283,7 @@ progress::-webkit-progress-value { background: var(--h3); }
 .qualites dt {
   font-weight: 700;
   line-height: 1.7em;
-  color: var(--h1);
+  color: var(--text-color-3);
   font-size: 1.7rem;
 }
 .qualites dt::before {
@@ -295,7 +296,7 @@ progress::-webkit-progress-value { background: var(--h3); }
   font-size: 1.4rem;
   padding-left: 4rem;
   font-style: italic;
-  color: var(--whitefff);
+  color: var(--bg-white-1);
 }
 
 

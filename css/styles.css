@@ -134,9 +134,10 @@ em {
 
 progress {
   width: 20rem;
-  background-color: blue;
+  background-color: var(--bg-white-3);
 }
 progress::-webkit-progress-value { background: var(--text-color-3); }
+progress::-moz-progress-bar { background: var(--text-color-3); }
 
 /**
  * -----------------------------------------------------------------------------

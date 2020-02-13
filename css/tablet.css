@@ -103,3 +103,114 @@ progress {
   font-size: 1.5rem;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**
+ * -----------------------------------------------------------------------------
+ * SECTION PRESENTATION
+ * -----------------------------------------------------------------------------
+ */
+.presentation {
+  max-height: 130rem;
+  padding: 4rem;
+}
+
+.nom figure {
+  margin-bottom: 2rem;
+}
+
+/**
+ * -----------------------------------------------------------------------------
+ * TAG GENERAL > PROGRESS
+ * -----------------------------------------------------------------------------
+ */
+progress {
+  width: 30rem;
+}
+
+/**
+ * -----------------------------------------------------------------------------
+ * SECTION PRESENTATION > CONTACT
+ * -----------------------------------------------------------------------------
+ */
+.contact, .langues {
+  width: 60%;
+  margin: auto;
+}
+.competences, .informations {
+  width: 80%;
+  margin: auto;
+}
+
+/**
+ * -----------------------------------------------------------------------------
+ * SECTION PROFIL
+ * -----------------------------------------------------------------------------
+ */
+.profil {
+  padding: 4rem 2rem;
+}
+.profil p {
+  font-size: 1.5rem;
+  padding: 1rem 2rem;
+  columns: 2;
+  white-space: pre-line;
+}
+
+/**
+ * -----------------------------------------------------------------------------
+ * SECTION FORMATIONS / SECTION EXPERIENCES
+ * -----------------------------------------------------------------------------
+ */
+.formations {
+  max-height: 97rem;
+}
+.formations dl {
+  width: 80%;
+  margin: 0 auto;
+}
+.formations dt, .experiences dt {
+  margin-top: 2rem;
+}
+.formations dd, .experiences dd {
+  padding-left: 3rem;
+}
+.experiences {
+  padding: 4rem 2rem;
+  min-height: 56rem;
+}
+.img_formations {
+  top: 1.1rem;
+  left: 53rem;
+}
+.img_experiences {
+  top: -3.1rem;
+  right: 2rem;
+}
+/**
+ * -----------------------------------------------------------------------------
+ * SECTION QUALITES
+ * -----------------------------------------------------------------------------
+ */
+.qualites {
+  padding: 4rem 2rem;
+  min-height: 43rem;
+}
+.qualites dt {
+  font-size: 1.7rem;
+}
+.qualites dd {
+  font-size: 1.5rem;
+}

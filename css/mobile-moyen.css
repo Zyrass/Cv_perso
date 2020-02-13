@@ -1,10 +1,18 @@
 /**
  * -----------------------------------------------------------------------------
+ * SECTION PRESENTATION
+ * -----------------------------------------------------------------------------
+ */
+.presentation {
+  max-height: 105rem;
+}
+/**
+ * -----------------------------------------------------------------------------
  * TAG GENERAL > PROGRESS
  * -----------------------------------------------------------------------------
  */
 progress {
-  width: 18rem;
+  width: 20rem;
 }
 
 /**
@@ -12,14 +20,14 @@ progress {
  * SECTION FORMATIONS / SECTION EXPERIENCES
  * -----------------------------------------------------------------------------
  */
-.formations dt, .experiences dt {
-  margin-top: 10rem;
+.formations dd, .experiences dd {
+  padding-left: 3rem;
 }
-
-.ul_formations img {
-  right: 15rem;
+.formations a {
+  font-size: 1.4rem;
 }
-.ul_experiences img {
+.img_experiences {
+  top: -10rem;
   right: 15rem;
 }
 
@@ -29,5 +37,11 @@ progress {
  * -----------------------------------------------------------------------------
  */
 .qualites {
-  min-height: 55rem;
+  min-height: 50rem;
+}
+.qualites dt {
+  font-size: 1.7rem;
+}
+.qualites dd {
+  font-size: 1.5rem;
 }

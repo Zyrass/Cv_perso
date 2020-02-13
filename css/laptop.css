@@ -36,7 +36,7 @@ h3 {
  * -----------------------------------------------------------------------------
  */
 ul li {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
 }
 
 /**
@@ -79,11 +79,12 @@ progress {
  */
 .presentation {
   padding: 4rem;
-  min-height: 80rem;
+  min-height: 70rem;
 
   display: grid;
   grid: 
     "nom competences" 1fr
+    "contact competences" 1fr
     "informations langues" 1fr / 1fr 1fr;
 }
 
@@ -98,7 +99,7 @@ progress {
 .profil p {
   font-size: 1.6rem;
   padding: 2rem;
-  columns: 2;
+  columns: 3;
   column-gap: 4rem;
 }
 
@@ -124,11 +125,13 @@ progress {
   width: 50vw;
   font-size: 1.6rem;
   border-right: 0.1rem solid var(--border-color);
+  padding: 10rem 2rem;
 }
 .experiences {
   grid-area: experiences;
   width: 50vw;
   font-size: 1.6rem;
+  padding: 10rem 2rem;
 }
 
 .formations dt, .experiences dt {
@@ -139,12 +142,12 @@ progress {
   font-size: 1.6rem;
 }
 
-.ul_formations img {
+.img_formations {
   top: -9rem;
   left: 18rem;
 }
-.ul_experiences img {
-  top: -11rem;
+.img_experiences {
+  top: -9rem;
   right: 21rem;
 }
 
@@ -154,14 +157,12 @@ progress {
  * -----------------------------------------------------------------------------
  */
 .qualites {
-  grid-area: qualites;
-  background-color: var(--bg-dark-2);
-  padding: 10rem 5rem;
+  padding: 10rem 10rem;
   max-height: 10rem;
 }
 
 .qualites dl {
-  margin-top: 5rem;
+  margin-top: 2rem;
 }
 
 .qualites dd {

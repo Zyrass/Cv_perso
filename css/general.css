@@ -54,7 +54,7 @@
   --em:     var( --white );
 
   /* Tag Progress */  
-  --progress-bg:  var( --dark );
+  --progress-bg:  var( --light );
   --progress-bar: var( --dark );
 
   /* Tags DL DT DD */

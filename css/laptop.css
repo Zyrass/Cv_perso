@@ -79,13 +79,17 @@ progress {
  */
 .presentation {
   padding: 4rem;
-  min-height: 70rem;
+  min-height: 80rem;
 
   display: grid;
   grid: 
     "nom competences" 1fr
     "contact competences" 1fr
     "informations langues" 1fr / 1fr 1fr;
+}
+
+.contact {
+  margin-top: 4rem;
 }
 
 /**

@@ -95,8 +95,8 @@ progress {
  * -----------------------------------------------------------------------------
  */
 .qualites {
-  padding: 10rem 4rem;
-  min-height: 50rem;
+  padding: 10rem 10rem!important;
+  min-height: 88rem!important;
 }
 
 .qualites dd {

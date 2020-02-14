@@ -62,7 +62,8 @@ progress {
  * -----------------------------------------------------------------------------
  */
 .qualites {
-  min-height: 50rem;
+  padding: 10rem 4rem;
+  min-height: 105rem;
 }
 .qualites dt {
   font-size: 1.7rem;

@@ -161,8 +161,8 @@ progress {
  * -----------------------------------------------------------------------------
  */
 .qualites {
-  padding: 10rem 10rem;
-  max-height: 10rem;
+  padding: 10rem 15rem;
+  min-height: 75rem;
 }
 
 .qualites dl {
@@ -171,6 +171,5 @@ progress {
 
 .qualites dd {
   font-size: 1.6rem;
-  padding-left: 6rem;
 }
 

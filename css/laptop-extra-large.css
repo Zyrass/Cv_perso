@@ -3,23 +3,40 @@
  * TAG GENERAL
  * -----------------------------------------------------------------------------
  */
-body {
-  font-size: 1.5rem;
-  overflow: hidden;
+ body {
+  background-color: var(--bg-dark-1);
+  min-height: 100vh;
+  max-height: 100vh;
   display: grid;
   grid: 
-    "presentation profil profil" 25rem
-    "presentation formations__experiences formations__experiences" 1fr / 28rem 1fr 1fr;
+    "presentation presentation" 1fr
+    "profil profil" 1fr
+    "formations__experiences" 1fr
+    "qualites qualites" 1fr / 1fr 1fr;
+}
+
+/**
+ * -----------------------------------------------------------------------------
+ * TAG GENERAL > H1 - H2 - H3
+ * -----------------------------------------------------------------------------
+ */
+h1 {
+  font-size: 3rem;
+}
+h2, h2 > i {
+  font-size: 2.6rem;  
+}
+h3 {
+  font-size: 2.2rem;
 }
 
 /**
  * -----------------------------------------------------------------------------
  * TAG GENERAL > UL LI A
- * -------------------------------------vg  ----------------------------------------
+ * -----------------------------------------------------------------------------
  */
 ul li {
-  font-size: 1.2rem;
-  padding: 0.03rem;
+  font-size: 1.4rem;
 }
 
 /**
@@ -34,18 +51,25 @@ dl {
   flex-flow: column wrap;
 }
 
-ol li {
-  font-size: 1.3rem;
-  padding: 0.2rem 0rem;
+
+dt {
+  line-height: 1.6rem;
+  font-size: 1.6rem;
 }
 
 /**
  * -----------------------------------------------------------------------------
- * TAG GENERAL > PROGRESS
+ * TAG GENERAL > SPAN EM STRONG PROGRESS
  * -----------------------------------------------------------------------------
  */
+span, em, strong {
+  font-size: 1.6rem;
+}
+span > i {
+  font-size: 1.6rem;
+}
 progress {
-  width: 12rem;
+  width: 30rem;
 }
 
 /**
@@ -54,59 +78,19 @@ progress {
  * -----------------------------------------------------------------------------
  */
 .presentation {
-  padding: 1rem;
-  min-width: 28rem;
-  max-width: 28rem;
+  padding: 4rem;
+  min-height: 80rem;
 
   display: grid;
-  grid:
-    "nom" 1fr
-    "contact" 1fr
-    "competences" 1fr 
-    "informations" 1fr
-    "langues" 1fr / 1fr;
+  grid: 
+    "nom competences" 1fr
+    "contact competences" 1fr
+    "informations langues" 1fr / 1fr 1fr;
 }
 
-/**
- * -----------------------------------------------------------------------------
- * SECTION PRESENTATION > CONTACT
- * -----------------------------------------------------------------------------
- */
 .contact {
-  grid-area: contact;
-  padding: 0.8rem;
+  margin-top: 4rem;
 }
-
-/**
- * -----------------------------------------------------------------------------
- * SECTION PRESENTATION > INFORMATIONS
- * -----------------------------------------------------------------------------
- */
-.informations {
-  grid-area: informations;
-  padding: 0.8rem;
-}
-
-/**
- * -----------------------------------------------------------------------------
- * SECTION PRESENTATION > COMPETENCES
- * -----------------------------------------------------------------------------
- */
-.competences {
-  grid-area: competences ;
-  padding: 0.8rem;
-}
-
-/**
- * -----------------------------------------------------------------------------
- * SECTION PRESENTATION > LANGUES
- * -----------------------------------------------------------------------------
- */
-.langues {
-  grid-area: langues;
-  padding: 0.8rem;
-}
-
 
 /**
  * -----------------------------------------------------------------------------
@@ -114,14 +98,13 @@ progress {
  * -----------------------------------------------------------------------------
  */
 .profil {
-  grid-area: profil;
-  max-height: 25rem;
-  padding: 0.5rem;
+  padding: 10rem 4rem;
 }
 .profil p {
-  padding: 0 4rem 2rem 4rem;
-  columns: 4;
-  column-gap: 1rem;
+  font-size: 1.6rem;
+  padding: 2rem;
+  columns: 3;
+  column-gap: 4rem;
 }
 
 /**
@@ -130,10 +113,10 @@ progress {
  * -----------------------------------------------------------------------------
  */
 .formations__experiences {
-  grid-area: formations__experiences;
-  border-left: var( --border-color );
   display: flex;
+  justify-content: space-evenly;
   flex-flow: row nowrap;
+  width: 100vw;
 }
 
 /**
@@ -142,35 +125,34 @@ progress {
  * -----------------------------------------------------------------------------
  */
 .formations {
-  font-size: 1.2rem;
+  grid-area: formations;
+  width: 50vw;
+  font-size: 1.6rem;
   border-right: 0.1rem solid var(--border-color);
-  padding: 2rem 4rem;
-  width: 50%;
+  padding: 10rem 2rem;
 }
 .experiences {
-  font-size: 1.2rem;
-  padding: 2rem 4rem;
-  width: 50%;
+  grid-area: experiences;
+  width: 50vw;
+  font-size: 1.6rem;
+  padding: 10rem 2rem;
 }
+
 .formations dt, .experiences dt {
-  margin-top: 1rem;
-}
-.formations dl, .experiences dl {
-  padding: 0.5rem;
-  margin-top: 0rem;
+  margin-top: 10rem;
 }
 
 .formations a {
-  font-size: 1.2rem;
+  font-size: 1.6rem;
 }
 
 .img_formations {
-  top: 0rem;
-  left: 62rem;
+  top: -9rem;
+  left: 18rem;
 }
 .img_experiences {
-  top: 0rem;
-  right: 4rem;
+  top: -9rem;
+  right: 21rem;
 }
 
 /**
@@ -179,25 +161,15 @@ progress {
  * -----------------------------------------------------------------------------
  */
 .qualites {
-  position: absolute;
-  bottom: 0rem;
-  right: 0;
-  padding: 1rem;
-  width: calc( 62.8vw - 38rem );
-  z-index: 99999;
-  min-height: 27rem;
-}
-
-.qualites dt {
-  margin-top: 1rem;
+  padding: 12rem 30rem;
+  min-height: 100vh;
 }
 
 .qualites dl {
-  margin-top: 0.5rem;
+  margin-top: 2rem;
 }
 
 .qualites dd {
-  font-size: 1.2rem;
-  padding-left: 4rem;
+  font-size: 1.6rem;
 }
 

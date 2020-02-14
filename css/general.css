@@ -17,20 +17,19 @@
  * -----------------------------------------------------------------------------
  */
 :root {
-  color: #8f60b6;
-
+  
   /* Couleurs */
-  --primary:    antiquewhite;
-  --dark:       darkgoldenrod;
-  --light:      gold;
-  --white:      #fff;
+  --primary:    #CCCCCC;
+  --dark:       #D88D96;
+  --light:      antiquewhite;
+  --white:      #E5E5E5;
 
-  /* Background-color des sections */
-  --bg-presentation:  #111;
-  --bg-profil:        #222;
-  --bg-formations:    #333;
-  --bg-experiences:   #444;
-  --bg-qualites:      #555;
+  /* Background-color des sections */ 
+  --bg-presentation:  #BC4352;
+  --bg-qualites:      #CA6874;
+  --bg-formations:    #BC4352;
+  --bg-experiences:   #BC4352;
+  --bg-profil:        #CA6874;
 
   /* Bordures Générales */
   --border-color: var( --primary );
@@ -54,28 +53,13 @@
   --em:     var( --white );
 
   /* Tag Progress */  
-  --progress-bg:  var( --light );
-  --progress-bar: var( --dark );
+  --progress-bg:  var( --dark );
+  --progress-bar: var( --light );
 
   /* Tags DL DT DD */
   --dt: var( --light );
   --dd: var( --white );
 
-/* 
-  --bg-dark-1: #222;
-  --bg-dark-1: #333;
-  
-  --bg-white-1: #fff;
-  --bg-white-2: #eee;
-  --bg-white-3: #ddd;
-  
-  --text-color-1: darkgoldenrod;
-  --text-color-2: mediumpurple;
-
-  --border-color: #000;
-  --strong: rebeccapurple;
-  --em: darkred;
-   */
 }
 
 /**
@@ -92,10 +76,10 @@ body {
   display: grid;
   grid: 
     "presentation" 1fr
-    "profil" 1fr
+    "qualites" 1fr
     "formations" 1fr
     "experiences" 1fr
-    "qualites" 1fr / 1fr;
+    "profil" 1fr / 1fr;
 }
 
 /**

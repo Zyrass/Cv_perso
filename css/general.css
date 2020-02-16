@@ -18,12 +18,12 @@
  */
 :root {
   
-  --primary:    #503088;
-  --secondary:  #eeee;
-  --text-dark:  #623BA8;
-  --text-white: #ffffff;
-  --light1:     #764BC2;
-  --light2:     #8E6ACD;
+  --primary:    #382714;
+  --secondary:  #a67137;
+  --text-dark:  #53391d;
+  --text-white: #8a5f2f;
+  --light1:     #6f4c26;
+  --light2:     #cb965b;
 
   /* Background-color des sections */ 
   --bg-presentation:  var( --primary );

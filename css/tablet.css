@@ -1,41 +1,3 @@
-/**
- * -----------------------------------------------------------------------------
- * TAG GENERAL > UL LI
- * -----------------------------------------------------------------------------
- */
-ul li {
-  font-size: 1.5rem;
-}
-
-/**
- * -----------------------------------------------------------------------------
- * TAG GENERAL > DT
- * -----------------------------------------------------------------------------
- */
-dt {
-  line-height: 1.6em;
-  font-size: 1.6rem;
-}
-dd {
-  font-size: 1.5rem;
-}
-
-/**
- * -----------------------------------------------------------------------------
- * TAG GENERAL > SPAN EM STRONG PROGRESS
- * -----------------------------------------------------------------------------
- */
-span, em, strong {
-  font-size: 1.4rem;
-}
-
-span > i {
-  font-size: 1.4rem;
-}
-
-progress {
-  width: 25rem;
-}
 
 /**
  * -----------------------------------------------------------------------------
@@ -43,13 +5,69 @@ progress {
  * -----------------------------------------------------------------------------
  */
 .presentation {
-  max-height: 110rem;
-  width: 90%;
-  margin: 0 auto;
+  max-height: 115rem;
+  max-width: 100vw;
+  padding: 5rem!important;
+  display: grid;
+  grid: 
+    "nom contact" 20rem
+    "nom langues" 20rem
+    "apprends apprends" 1fr / 1fr 2fr;
 }
 
-.nom img {
-  margin: 3rem 2rem 2rem 2rem;
+.nom {
+  grid-area: nom;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  flex-flow: column nowrap;
+  border: none;
+}
+
+.nom figure img {
+  max-width: 60%;
+}
+.nom figure figcaption {
+  padding: 1rem;
+}
+
+/**
+ * -----------------------------------------------------------------------------
+ * SECTION PRESENTATION > CONTACT
+ * -----------------------------------------------------------------------------
+ */
+.contact {
+  grid-area: contact;
+  margin: 0;
+}
+/**
+ * -----------------------------------------------------------------------------
+ * SECTION PRESENTATION > APPRENDRE
+ * -----------------------------------------------------------------------------
+ */
+.apprends {
+  grid-area: apprends ;
+  margin: 4rem;
+  padding: 4rem;
+  background-color: var(--secondary);
+  border-radius: 0%;
+}
+
+.liste_icone {
+  display: flex;
+  justify-content: space-evenly;
+  flex-flow: row wrap;
+}
+
+/**
+ * -----------------------------------------------------------------------------
+ * SECTION PRESENTATION > LANGUES
+ * -----------------------------------------------------------------------------
+ */
+.langues {
+  grid-area: langues;
+  margin: 0;
+  padding: 0;
 }
 
 /**

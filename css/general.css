@@ -18,47 +18,48 @@
  */
 :root {
   
-  /* Couleurs */
-  --primary:    #CCCCCC;
-  --dark:       #D88D96;
-  --light:      antiquewhite;
-  --white:      #E5E5E5;
+  --primary:    #503088;
+  --secondary:  #eeee;
+  --text-dark:  #623BA8;
+  --text-white: #ffffff;
+  --light1:     #764BC2;
+  --light2:     #8E6ACD;
 
   /* Background-color des sections */ 
-  --bg-presentation:  #BC4352;
-  --bg-qualites:      #CA6874;
-  --bg-formations:    #BC4352;
-  --bg-experiences:   #BC4352;
-  --bg-profil:        #CA6874;
+  --bg-presentation:  var( --primary );
+  --bg-qualites:      var( --secondary );
+  --bg-formations:    var( --primary );
+  --bg-experiences:   var( --primary );
+  --bg-profil:        var( --secondary );
 
   /* Bordures Générales */
-  --border-color: var( --primary );
-  --border-top:     0.1rem solid var( --border-color );
-  --border-right:   0.1rem solid var( --border-color );
-  --border-bottom:  0.1rem solid var( --border-color );
-  --border-left:    0.1rem solid var( --border-color );
+  --border-color-primary:   var( --primary );
+  --border-top-primary:     0.1rem dotted var( --border-color-primary );
+  --border-right-primary:   0.1rem solid var( --border-color-primary );
+  --border-bottom-primary:  0.1rem solid var( --border-color-primary );
+  --border-left-primary:    0.1rem solid var( --border-color-primary );
+
+  --border-color-secondary :  var( --secondary );
+  --border-top-secondary:     0.1rem solid var( --border-color-secondary );
+  --border-right-secondary:   0.1rem solid var( --border-color-secondary );
+  --border-bottom-secondary:  0.1rem solid var( --border-color-secondary );
+  --border-left-secondary:    0.1rem solid var( --border-color-secondary );
 
   /* Tag H1 */
-  --h1: var( --dark );
+  --h1: var( --light2 );
 
   /* Tag H2 */
-  --h2:               var( --dark );
-  --h2-border-color:  var( --h2 );
-  --h2-border-bottom: 0.1rem solid var( --light );
-  --i:                var( --light );
+  --h2:               var( --light1 );
+  --i:                var( --light2 );
 
   /* Tags A (link) Strong (gras) Em (emphases) */
-  --link:   var( --dark );
-  --strong: var( --light );
-  --em:     var( --white );
-
-  /* Tag Progress */  
-  --progress-bg:  var( --dark );
-  --progress-bar: var( --light );
+  --link:   var( --text-white );
+  --strong: var( --light1 );
+  --em:     var( --light1 );
 
   /* Tags DL DT DD */
-  --dt: var( --light );
-  --dd: var( --white );
+  --dt: var( --light2 );
+  --dd: var( --text-white );
 
 }
 
@@ -69,7 +70,6 @@
  */
 body {
   background-color: var(--bg-presentation);
-  color: var( --primary );
   font-size: 1.4rem;
   min-height: 100vh;
   max-height: 100vh;
@@ -88,7 +88,6 @@ body {
  * -----------------------------------------------------------------------------
  */
 h1,
-h2,
 h3 {
   text-transform: uppercase;
   text-align: center;
@@ -96,10 +95,7 @@ h3 {
 h2, h2 > i {
   font-size: 2.0rem;
 }
-h2 > i {
-  color: var( --i );
-}
-h2, h3 {
+h3 {
   font-style: italic;
 }
 
@@ -110,8 +106,7 @@ h1 {
 h2 {
   margin: 0 0 1rem 0;
   color: var(--h2);
-  border-bottom: var( --h2-border-bottom );
-  padding-bottom: 1rem;
+  text-align: left;
 }
 h3 {
   font-size: 1.6rem;
@@ -224,13 +219,6 @@ em {
   font-size: 1.3rem;
 }
 
-progress {
-  width: 15rem;
-  background-color: var(--progress-bg);
-}
-progress::-webkit-progress-value { background: var(--progress-bar); }
-progress::-moz-progress-bar { background: var(--progress-bar); }
-
 /**
  * -----------------------------------------------------------------------------
  * SECTION PRESENTATION
@@ -238,47 +226,42 @@ progress::-moz-progress-bar { background: var(--progress-bar); }
  */
 .presentation {
   background-color: var( --bg-presentation );
+  color: var(--text-white);
   border-right: var( --border-right );
-  padding: 1.4rem;
-  max-height: 102rem;
-  min-width: 100vw;
+  padding: 5rem 2rem;
+  max-height: 115rem;
   max-width: 100vw;
 
   display: grid;
   grid: 
     "nom" 1fr
     "contact" 10rem
-    "competences" 1fr
-    "informations" 1fr
+    "apprends" 1fr
     "langues" 1fr / 1fr;
 }
 
 .nom {
   grid-area: nom;
   display: flex;
+  justify-content: center;
+  padding: 2rem;
+  align-items: center;
   flex-flow: column wrap;
+  border: 1px dotted var(--secondary);
 }
 .nom figure img {
   display: flex;
   align-self: center;
-  padding: 2rem 2rem 0 2rem;
-  width: 100%;
-  filter: sepia(100%);
+  padding: 1rem 0 0 0;
+  max-width: 70%;
+  margin: 0 auto;
+  border-radius: 3%;
 }
 .nom figure figcaption {
   text-align: center;
   font-size: 1.4rem;
-  padding: 1rem;
+  padding: 0 1rem 1rem 1rem;
   width: 100%;
-}
-.nom figure figcaption > i {
-  font-size: 1.4rem;
-}
-.nom figure figcaption > i::after {
-  content: " 06.22.63.79.24";
-  color: var( --white );
-  font-size: 1.6rem;
-  font-weight: 300;
 }
 
 /**
@@ -288,28 +271,38 @@ progress::-moz-progress-bar { background: var(--progress-bar); }
  */
 .contact {
   grid-area: contact;
-  padding: 1rem;
   font-size: 1.4rem;
+  margin: 2rem 1rem;
+  
+}
+.contact h2 {
+  color: var(--secondary);
+  border-bottom: var( --border-bottom-secondary );
+  padding-bottom: 1rem;
 }
 
 /**
  * -----------------------------------------------------------------------------
- * SECTION PRESENTATION > INFORMATIONS
+ * SECTION PRESENTATION > APPRENDRE
  * -----------------------------------------------------------------------------
  */
-.informations {
-  grid-area: informations;
-  padding: 1rem;
+.apprends {
+  grid-area: apprends ;
+  margin: 4rem 2rem 2rem 2rem;
+  padding: 2rem;
+  background-color: var(--secondary);
+  border-radius: 3%;
+}
+.apprends h2 {
+  color: var(--primary);
+  border-bottom: var( --border-bottom-primary );
+  padding-bottom: 1rem;
 }
 
-/**
- * -----------------------------------------------------------------------------
- * SECTION PRESENTATION > COMPETENCES
- * -----------------------------------------------------------------------------
- */
-.competences {
-  grid-area: competences ;
-  padding: 2rem 1rem;
+.liste_icone {
+  display: flex;
+  justify-content: space-evenly;
+  flex-flow: row wrap;
 }
 
 /**
@@ -319,7 +312,12 @@ progress::-moz-progress-bar { background: var(--progress-bar); }
  */
 .langues {
   grid-area: langues;
-  padding: 1rem 1rem 0 1rem;
+  padding: 2rem;
+}
+.langues h2 {
+  color: var(--secondary);
+  border-bottom: var( --border-bottom-secondary );
+  padding-bottom: 1rem;
 }
 
 /**
@@ -412,7 +410,7 @@ progress::-moz-progress-bar { background: var(--progress-bar); }
   border-top: var( --border-top );
   max-width: 100vw;
   padding: 8rem 2rem;
-  min-height: 108rem;
+  min-height: 115rem;
 }
 
 .qualites dl {
@@ -438,4 +436,3 @@ progress::-moz-progress-bar { background: var(--progress-bar); }
   font-size: 1.6rem;
   padding-right: 0.5rem;
 }
-

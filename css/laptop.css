@@ -4,72 +4,12 @@
  * -----------------------------------------------------------------------------
  */
 body {
-  background-color: var(--bg-dark-1);
-  min-height: 100vh;
-  max-height: 100vh;
-  display: grid;
-  grid: 
-    "presentation presentation" 1fr
-    "profil profil" 1fr
-    "formations__experiences" 1fr
-    "qualites qualites" 1fr / 1fr 1fr;
-}
-
-/**
- * -----------------------------------------------------------------------------
- * TAG GENERAL > H1 - H2 - H3
- * -----------------------------------------------------------------------------
- */
-h1 {
-  font-size: 3rem;
-}
-h2, h2 > i {
-  font-size: 2.6rem;  
-}
-h3 {
-  font-size: 2.2rem;
-}
-
-/**
- * -----------------------------------------------------------------------------
- * TAG GENERAL > UL LI A
- * -----------------------------------------------------------------------------
- */
-ul li {
-  font-size: 1.4rem;
-}
-
-/**
- * -----------------------------------------------------------------------------
- * TAG GENERAL > DL DT DD
- * -----------------------------------------------------------------------------
- */
-
-dl {
   display: flex;
-  justify-content: center;
-  flex-flow: column wrap;
-}
-
-
-dt {
-  line-height: 1.6rem;
-  font-size: 1.6rem;
-}
-
-/**
- * -----------------------------------------------------------------------------
- * TAG GENERAL > SPAN EM STRONG PROGRESS
- * -----------------------------------------------------------------------------
- */
-span, em, strong {
-  font-size: 1.6rem;
-}
-span > i {
-  font-size: 1.6rem;
-}
-progress {
-  width: 30rem;
+  flex-flow: row wrap;
+  /* grid: 
+    "presentation qualites" 1fr
+    "formations__experiences" 1fr
+    "profil profil" 1fr / 1fr 2fr; */
 }
 
 /**
@@ -78,19 +18,176 @@ progress {
  * -----------------------------------------------------------------------------
  */
 .presentation {
-  padding: 4rem;
-  min-height: 80rem;
-
+  min-height: 100vh;
+  max-height: 108.1rem;
+  max-width: 40rem;
+  padding: 4rem!important;
   display: grid;
   grid: 
-    "nom competences" 1fr
-    "contact competences" 1fr
-    "informations langues" 1fr / 1fr 1fr;
+    "nom" 1fr
+    "contact" 1fr
+    "apprends" 1fr
+    "langues" 1fr / 1fr;
+  box-shadow: 0 -2rem 2rem var(--light1);
+  z-index: 1;
 }
 
-.contact {
-  margin-top: 4rem;
+.nom {
+  grid-area: nom;
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  flex-flow: column nowrap;
 }
+
+.nom figure img {
+  max-width: 60%;
+}
+.nom figure figcaption {
+  padding: 1rem;
+}
+
+/**
+ * -----------------------------------------------------------------------------
+ * SECTION PRESENTATION > CONTACT
+ * -----------------------------------------------------------------------------
+ */
+.contact {
+  grid-area: contact;
+  margin: 2rem;
+  
+}
+/**
+ * -----------------------------------------------------------------------------
+ * SECTION PRESENTATION > APPRENDRE
+ * -----------------------------------------------------------------------------
+ */
+.apprends {
+  grid-area: apprends ;
+  margin: 1rem;
+  padding: 2em;
+  border-radius: 0%;
+}
+
+.liste_icone {
+  justify-content: space-around;
+}
+
+/**
+ * -----------------------------------------------------------------------------
+ * SECTION PRESENTATION > LANGUES
+ * -----------------------------------------------------------------------------
+ */
+.langues {
+  grid-area: langues;
+  margin: 1rem;
+  padding: 2rem;
+}
+
+
+
+
+
+/**
+ * -----------------------------------------------------------------------------
+ * SECTION QUALITES
+ * -----------------------------------------------------------------------------
+ */
+.qualites {
+  grid-area: qualites;
+  background-color: var(--bg-qualites)!important;
+  max-height: 100vh;
+  max-width: calc(100vw - 40rem);
+
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+.qualites h2 {
+  color: var(--text-dark);
+  border-bottom: var( --border-bottom-primary );
+  padding-bottom: 1rem;
+  width: 60%;
+}
+
+.qualites dl {
+  margin: 3rem 6rem;
+}
+
+.qualites dt {
+  margin-top: 3rem;
+  font-weight: 300;
+  font-size: 1.6rem;
+  padding-top: 2rem;
+  color: var( --text-dark );
+  border-top: var( --border-top-primary );
+}
+
+.qualites dd {
+  font-weight: 400;
+  padding-top: 1rem;
+  padding-left: 2rem;
+  font-style: italic;
+  color: var(--light1);
+  font-size: 1.4rem;
+}
+.qualites dd::before {
+  content: '\2014'; /* https://www.compart.com/fr/unicode/U+2014 — */
+  font-size: 1.6rem;
+  padding-right: 0.5rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /**
  * -----------------------------------------------------------------------------
@@ -154,22 +251,3 @@ progress {
   top: -9rem;
   right: 21rem;
 }
-
-/**
- * -----------------------------------------------------------------------------
- * SECTION QUALITES
- * -----------------------------------------------------------------------------
- */
-.qualites {
-  padding: 10rem 15rem;
-  min-height: 75rem;
-}
-
-.qualites dl {
-  margin-top: 2rem;
-}
-
-.qualites dd {
-  font-size: 1.6rem;
-}
-
